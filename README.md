@@ -29,7 +29,9 @@ Elastic net is a type of regularized linear regression and it combines two popul
 min 1 ∥Xw−y∥2 +αρ∥w∥ + α(1−ρ)∥w∥2 w 2nsamples 2 1 2 2
    2
   Figure 2: Lasso and Elastic-Net Paths
-  <img src="graph.png" width=250><br>
+  
+  <img src="graph.png"><br>
+  
 Bayesian Ridge Regression is more robust to ill-posed problems, and we used it to generate an average CV score to compare to other models like Lasso which is ”a linear model that estimates sparse coefficients”, it is used over regression methods for a more accurate prediction by us- ing shrinkage.[3].Figure 2, shows Lasso and Elastic Net Paths![3]
 We have also used a Linear Ridge regressor which yielded results close to those of the linear regression model. The most significant model that was used in this research is the Gradient Boosting Regressor, it yielded the highest CV score average because it uses an ensemble al- gorithm that produces multiple groups of models to con- verge to one best fitting model.
 Our attempt at tuning our hyper parameters for the gra- dient boosting regression model didn’t yield increased re- sults, we believe partly due to a misimplementation when using hyper parameters like the learning rate and n esti- mators for the model. The ”tuned” gradient boosting re- gressor reported a CV average score lower than that of the regular one.
