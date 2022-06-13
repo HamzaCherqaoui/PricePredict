@@ -13,7 +13,7 @@ contains certain attributes with missing values, especially the numerical attrib
 
 Table 1 shows the attributes used in this research which were classified into broader classes. The table also shows the type of values they contain.
 
-<img src="Table 1"><br>
+<img src="Table 1.png" width=450><br>
 
 **2 Experiment**
 
@@ -24,6 +24,12 @@ The next step in this process was to add some new attributes to our predictors l
 After adding new attributes to our predictors, we imple- mented functions to handle conversions from non-numeric values to numeric. As previously mentioned, attributes with ordinal values were converted to numerical by map- ping numbers in ascending order to each corresponding value of such attribute. For the attributes ’Condition 1’ and ’Condition 2’, we used a helper function that uses a dictionary to map certain values to their respective nu- meric representations and we followed the same proce- dure for Exterior attributes and Location attributes. Fig- ure 1 shows a snippet of the code used in this process for the qualitative attributes.
 After converting our values to numerical values, we still needed to fill in missing values for this converted at- tributes, so we wrote a function to map the mode of the attribute for each missing value. In this case, we used this helper function for both location attributes and Exterior attributes.
 Figure 1: This method, maps numerical values to each value of the ’qualitativeAtts’
+
+<img src="Table 2.png" width=450><br>
+
+This method, maps numerical values to each value of the ’qualitativeAtts’
+
+
 Following this conversion from categorical to numer- ical values, we did one hot encoding for the ordinal at- tributes we converted and used the built-in getdummies function in pandas. This part of the pre-processing was especially intricate as some attributes when one-hot en- coded and included in our predictors, significantly re- duced our average cross-validation score or didn’t im- prove it at all, so we made sure to select only the attributes that improved said average.
 
 **2.2 Algorithms and Hyperparameterization**
@@ -43,6 +49,10 @@ Our attempt at tuning our hyper parameters for the gra- dient boosting regressio
 **2.3 Results**
 
 After pre-processing the data and building various mod- els, the resulting predictions were very interesting and had a lot to say about the tuning of the models and how our pre-processing worked. On one hand the cross validation score obtained from our linear regression model was about 0.807 approximately, other models like Lasso, Ridge, and Elastic-Net had similar results that vary a lit- tle. The Bayesian Ridge slightly out performed these mod- els and yielded a score of 0.810. However, the Gradient Boosting Regression model had the best results out of all the other models used in this research having an average cross validation score of 0.898. Table 2, shows the aver- age cross validation scores for all six models we used in descending order.
+
+Table 2: Table of Modles used and their accuracies
+
+<img src="Table 3.png" width=450><br>
 
 **2.4 Analysis**
 
