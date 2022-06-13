@@ -11,6 +11,10 @@ Estimating cost is the foundation for any business and it proves extremely criti
 The data set used in this research was provided by a Kag- gle competition by the title of ”House Prices - Advanced Regression Techniques”, it is called The Ames Housing dataset and it was compiled by Dean De Cock for the pur- pose of education in data science. It’s a good alternative to the Boston Housing dataset as it is more modernized and expanded. The houses in this data set each posess 81 attributes ranging from the property’s sale price in dol- lars, its lot size in square feet all the way to the type of roofing used in that property. Amongst these 81 attributes, 38 of them were numerical attributes (i.e: ’OverallQual’: Overall material and finish quality) , and 43 categorical attributes such as the height of the basement which are or- dered from ”Excellent” to ”No Basement”. This data set
 contains certain attributes with missing values, especially the numerical attributes, it also contains some ordinal at- tributes that have values ranging from ”Ex” which stands for ”Excellent” to ”Po” which stands for ”Poor” such as the ”ExterQual” attribute which evaluates the quality of the material on the exterior of the property. This data set also contains attributes for the location of each house which need to undergo moderate pre-processing in order to be later fitted to our models. The nature of these at- tributes and a good understanding of how to process their values is a very critical step in order to utilize the integrity of the data set and increase the accuracy of our models.
 
+Table 1 shows the attributes used in this research which were classified into broader classes. The table also shows the type of values they contain.
+
+<img src="Table 1"><br>
+
 **2 Experiment**
 
 **2.1 Pre-Processing**
